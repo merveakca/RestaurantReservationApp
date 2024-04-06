@@ -16,6 +16,6 @@ public class Order : BaseModel
     public int MenuId { get; set; }
     public Menu Menu { get; set; }
 
-    public DateTime OrderDate { get; set; }
+    public DateTime? OrderDate { get; set; }
     public int Quantity { get; set; }
 }
