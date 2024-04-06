@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RestaurantReservationApp.Models;
-internal class Menu
+public class Menu : BaseModel
 {
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public decimal Price { get; set; }
 }
