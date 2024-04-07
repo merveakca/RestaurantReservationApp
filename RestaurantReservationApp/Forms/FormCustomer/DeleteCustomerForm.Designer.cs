@@ -52,7 +52,6 @@ partial class DeleteCustomerForm
         dtgridDeleteCustomers.RowHeadersWidth = 62;
         dtgridDeleteCustomers.Size = new Size(1216, 591);
         dtgridDeleteCustomers.TabIndex = 25;
-        dtgridDeleteCustomers.CellContentClick += dtgridDeleteCustomers_CellContentClick;
         // 
         // btnDelete
         // 

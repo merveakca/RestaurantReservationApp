@@ -27,11 +27,13 @@ public partial class AddCustomerForm : Form
             customer.Surname = txtSurname.Text.Trim();
             customer.Email = txtEmail.Text.Trim();
             customer.Phone = txtPhone.Text.Trim();
-            customer.Address = txtAddress.Text;
+            customer.Address = txtAddress.Text.Trim();
 
             CustomerServices customerServices = new CustomerServices();
             customerServices.AddCustomer(customer);
             MessageBox.Show(customer.Name + " Customer added succesfully");
+            dtgridAddCustomers.DataSource = customerServices.GetAllCustomer();
+
         }
         catch (Exception)
         {

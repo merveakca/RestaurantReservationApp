@@ -23,13 +23,14 @@ public class CustomerServices
         RestaurantDbContext db = new RestaurantDbContext();
         List<Customer> customers = db.Customers.Where(x => x.IsDeleted == false).ToList();
         return customers;
+
     }
 
     public void DeleteCustomer(int id)
     {
         RestaurantDbContext db = new RestaurantDbContext();
         // önce silinecek müşteri bulunur.
-        //Customer customer = db.Customers.Find(id);
+        // Customer customer = db.Customers.Find(id);
         Customer customer = db.Customers.FirstOrDefault(x => x.Id == id);
 
         customer.IsDeleted = true;

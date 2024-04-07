@@ -19,8 +19,8 @@ public partial class DeleteCustomerForm : Form
 
     private void DeleteCustomerForm_Load(object sender, EventArgs e)
     {
-
-        LoadData();
+        CustomerServices customerServices = new CustomerServices();
+        dtgridDeleteCustomers.DataSource = customerServices.GetAllCustomer();
     }
 
     private void btnDelete_Click(object sender, EventArgs e)
@@ -29,17 +29,9 @@ public partial class DeleteCustomerForm : Form
 
         CustomerServices customerServices = new CustomerServices();
         customerServices.DeleteCustomer(selectedId);
-        LoadData();
-    }
-
-    public void LoadData()
-    {
-        CustomerServices customerServices = new CustomerServices();
         dtgridDeleteCustomers.DataSource = customerServices.GetAllCustomer();
     }
 
-    private void dtgridDeleteCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-    {
 
-    }
+    
 }
