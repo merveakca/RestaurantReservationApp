@@ -19,22 +19,27 @@ public partial class DeleteCustomerForm : Form
 
     private void DeleteCustomerForm_Load(object sender, EventArgs e)
     {
+
         LoadData();
     }
 
     private void btnDelete_Click(object sender, EventArgs e)
     {
-        int selectedCell = Convert.ToInt32(dtgridCustomers.SelectedCells[0].Value);
+        int selectedId = Convert.ToInt32(dtgridDeleteCustomers.CurrentRow.Cells["id"].Value);
+
         CustomerServices customerServices = new CustomerServices();
-        customerServices.DeleteCustomer(selectedCell);
+        customerServices.DeleteCustomer(selectedId);
         LoadData();
     }
 
-    void LoadData()
+    public void LoadData()
     {
         CustomerServices customerServices = new CustomerServices();
-        dtgridCustomers.DataSource = customerServices.GetAllCustomer();
+        dtgridDeleteCustomers.DataSource = customerServices.GetAllCustomer();
     }
 
-    
+    private void dtgridDeleteCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
+    }
 }

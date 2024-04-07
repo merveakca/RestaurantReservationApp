@@ -29,9 +29,9 @@ partial class DeleteCustomerForm
     private void InitializeComponent()
     {
         label4 = new Label();
-        dtgridCustomers = new DataGridView();
+        dtgridDeleteCustomers = new DataGridView();
         btnDelete = new Button();
-        ((System.ComponentModel.ISupportInitialize)dtgridCustomers).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dtgridDeleteCustomers).BeginInit();
         SuspendLayout();
         // 
         // label4
@@ -44,14 +44,15 @@ partial class DeleteCustomerForm
         label4.TabIndex = 26;
         label4.Text = "Customers";
         // 
-        // dtgridCustomers
+        // dtgridDeleteCustomers
         // 
-        dtgridCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dtgridCustomers.Location = new Point(70, 89);
-        dtgridCustomers.Name = "dtgridCustomers";
-        dtgridCustomers.RowHeadersWidth = 62;
-        dtgridCustomers.Size = new Size(1216, 591);
-        dtgridCustomers.TabIndex = 25;
+        dtgridDeleteCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dtgridDeleteCustomers.Location = new Point(70, 89);
+        dtgridDeleteCustomers.Name = "dtgridDeleteCustomers";
+        dtgridDeleteCustomers.RowHeadersWidth = 62;
+        dtgridDeleteCustomers.Size = new Size(1216, 591);
+        dtgridDeleteCustomers.TabIndex = 25;
+        dtgridDeleteCustomers.CellContentClick += dtgridDeleteCustomers_CellContentClick;
         // 
         // btnDelete
         // 
@@ -72,12 +73,12 @@ partial class DeleteCustomerForm
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1370, 924);
         Controls.Add(label4);
-        Controls.Add(dtgridCustomers);
+        Controls.Add(dtgridDeleteCustomers);
         Controls.Add(btnDelete);
         Name = "DeleteCustomerForm";
         Text = "DeleteCustomerForm";
         Load += DeleteCustomerForm_Load;
-        ((System.ComponentModel.ISupportInitialize)dtgridCustomers).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dtgridDeleteCustomers).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -85,6 +86,6 @@ partial class DeleteCustomerForm
     #endregion
 
     private Label label4;
-    private DataGridView dtgridCustomers;
+    private DataGridView dtgridDeleteCustomers;
     private Button btnDelete;
 }

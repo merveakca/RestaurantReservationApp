@@ -21,7 +21,7 @@ public class CustomerServices
     public List<Customer> GetAllCustomer()
     {
         RestaurantDbContext db = new RestaurantDbContext();
-        List<Customer> customers = db.Customers.ToList();
+        List<Customer> customers = db.Customers.Where(x => x.IsDeleted == false).ToList();
         return customers;
     }
 
@@ -32,7 +32,7 @@ public class CustomerServices
         //Customer customer = db.Customers.Find(id);
         Customer customer = db.Customers.FirstOrDefault(x => x.Id == id);
 
-        db.Customers.Remove(customer);
+        customer.IsDeleted = true;
         db.SaveChanges();
     }
 }

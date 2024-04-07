@@ -39,9 +39,9 @@ partial class AddCustomerForm
         label2 = new Label();
         txtName = new TextBox();
         label1 = new Label();
-        dtgridCustomers = new DataGridView();
+        dtgridAddCustomers = new DataGridView();
         label4 = new Label();
-        ((System.ComponentModel.ISupportInitialize)dtgridCustomers).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dtgridAddCustomers).BeginInit();
         SuspendLayout();
         // 
         // btnAdd
@@ -147,14 +147,14 @@ partial class AddCustomerForm
         label1.TabIndex = 11;
         label1.Text = "Name:";
         // 
-        // dtgridCustomers
+        // dtgridAddCustomers
         // 
-        dtgridCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dtgridCustomers.Location = new Point(27, 416);
-        dtgridCustomers.Name = "dtgridCustomers";
-        dtgridCustomers.RowHeadersWidth = 62;
-        dtgridCustomers.Size = new Size(1216, 591);
-        dtgridCustomers.TabIndex = 22;
+        dtgridAddCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dtgridAddCustomers.Location = new Point(27, 416);
+        dtgridAddCustomers.Name = "dtgridAddCustomers";
+        dtgridAddCustomers.RowHeadersWidth = 62;
+        dtgridAddCustomers.Size = new Size(1216, 591);
+        dtgridAddCustomers.TabIndex = 22;
         // 
         // label4
         // 
@@ -172,7 +172,7 @@ partial class AddCustomerForm
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1395, 1073);
         Controls.Add(label4);
-        Controls.Add(dtgridCustomers);
+        Controls.Add(dtgridAddCustomers);
         Controls.Add(btnAdd);
         Controls.Add(txtAddress);
         Controls.Add(label5);
@@ -187,7 +187,7 @@ partial class AddCustomerForm
         Name = "AddCustomerForm";
         Text = "AddCustomerForm";
         Load += AddCustomerForm_Load;
-        ((System.ComponentModel.ISupportInitialize)dtgridCustomers).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dtgridAddCustomers).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -205,6 +205,6 @@ partial class AddCustomerForm
     private Label label2;
     private TextBox txtName;
     private Label label1;
-    private DataGridView dtgridCustomers;
+    private DataGridView dtgridAddCustomers;
     private Label label4;
 }

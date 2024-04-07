@@ -42,6 +42,7 @@ public partial class AddCustomerForm : Form
     private void AddCustomerForm_Load(object sender, EventArgs e)
     {
         CustomerServices customerServices = new CustomerServices();
-        dtgridCustomers.DataSource = customerServices.GetAllCustomer();
+        dtgridAddCustomers.DataSource = customerServices.GetAllCustomer();
     }
+
 }
