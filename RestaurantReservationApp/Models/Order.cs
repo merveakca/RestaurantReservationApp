@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace RestaurantReservationApp.Models;
 public class Order : BaseModel
 {
-    [ForeignKey("ReservationId")]
     public int ReservationId { get; set; }
+    [ForeignKey("ReservationId")]
     public Reservation Reservation { get; set; }
 
-    [ForeignKey("MenuId")]
     public int MenuId { get; set; }
+    [ForeignKey("MenuId")]
     public Menu Menu { get; set; }
 
     public DateTime? OrderDate { get; set; }

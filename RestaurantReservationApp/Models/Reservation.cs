@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace RestaurantReservationApp.Models;
 public class Reservation : BaseModel
 {
-    [ForeignKey("CustomerId")]
     public int CustomerId { get; set; }
+    [ForeignKey("CustomerId")]
     public Customer Customer { get; set; }
 
     public DateTime ReservationDate { get; set; }
